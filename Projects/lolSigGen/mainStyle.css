@@ -1,0 +1,172 @@
+@font-face {
+  font-family: "League";
+  src: url("media/fonts/friz-quadrata-tt.ttf");
+}
+
+body {
+	background-color: #000a11;
+	color: #ccc;
+}
+
+.btnLarge{
+	margin-top: 10px;
+	margin-bottom: 15px;
+	margin-left: 10px;
+	margin-right: 10px;
+	color: black;
+	border: 3px solid black;
+	border-color: #f6c653 #bd6a23 #b6631f #e8ab4a;
+	background: #d79922;
+	font: 16px League;
+	display: inline-block;
+}
+
+
+.errorMessage, .infoMessage{
+	color: #d8000c;
+	background: #ffbaba;
+	text-align: center;
+	border: 3px solid red;
+	width: 500px;
+	font: bold 14px League; 
+	margin: 0 auto;
+	opacity: 0;
+	padding: 5px;
+	
+	animation-duration: 4s;
+	animation-iteration-count: 1;
+}
+
+.infoMessage{
+	color: #00529B;
+	background: #bde5f8;
+	text-align: center;
+	border: 1px solid blue;
+	animation-duration: 8s;
+}
+
+.statContainer{
+	display: inline-block;
+	margin: 5px;
+	border: 3px solid white;
+	width: 350px;
+	height: 235px;
+	vertical-align: top;
+}
+
+#projInfo{
+	text-align: center;
+	font-family: League;
+}
+
+#projInfo a, #projInfo a:visited { color: gray; }
+
+#messages{
+	position: absolute;
+	text-align: center;
+	width:100%;
+	z-index: 5;
+}
+
+#startPage{
+	position: fixed;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);	
+}
+
+#startContents {
+	position: relative;
+	border: 7px solid white;
+	border-style: double;
+	width: 0px;
+	height: 366px;
+	text-align: center;
+	opacity: 0;
+	overflow: hidden;
+	
+	transition: width 2s, opacity 4s;
+	transition-delay: 0s, 0s;	
+}
+
+#innerStartContents{
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -450px;
+	width: 900px;
+	height: 500px;
+}
+
+#logo {
+	margin-bottom: -7%;
+	margin-top: -7%;
+	width: 900px;
+}
+
+#searchBar input[type="text"]{
+	padding: 5px;
+	text-align: center;
+	font-size: 16px;
+	width: 50%;
+	border: solid 3px #aaf;
+	transition: box-shadow 0.3s;
+}
+
+#searchBar input[type="text"]:focus{
+	border: solid 5px White;
+	box-shadow: 0 0 10px 3px #ff8c00;
+	padding: 3px;
+}
+
+#btnUseMic{
+	position: relative;
+	top: 217px;
+	left: 213px;	
+	opacity: 0.8;
+	display: none;
+}
+
+#infoPage {
+	position: relative;
+	text-align: center;
+	border: 7px solid white;
+	border-style: double;
+	margin: 20px auto;
+	
+	/*For when the page first starts*/
+	width: 1px;
+	height: 1px;
+	opacity: 0;
+	overflow: hidden;
+	transition: opacity 3s, width 1s, height 3s;
+	transition-delay: 2s, 3s, 4.5s;
+}
+
+#infoContentContainer{
+	min-width: 500px;
+	color: white;
+	margin: 10px;
+	padding: 10px;
+	text-align: center;
+}
+
+#imagePreloads{
+	display:none;
+}
+
+#infoCanvas{
+	margin:0 auto;
+	margin-top: 20px;
+}
+
+@keyframes fadeInOut{
+	0% {opacity: 0.0;}
+	15% {opacity: 1.0;}
+	85% {opacity: 1.0;}
+	100% {opacity: 0.0;}
+}
+
+
+
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>League Signature Creator</title>
+	<link href="mainStyle.css" rel="stylesheet" type="text/css">
+	<script src="main.js"></script>
+	
+  </head>
+  <body>
+	<div id="projInfo">
+			<p><a href="projectInfo.html">Click here for information on this project</a></p>
+			<p>This is a work in progress and currently only works with the NA region.</p>
+	</div>
+	
+	<div id="messages">
+		<div id="nameError" class="errorMessage"><p>Summoner not found, please try again</p></div>
+		<div id="micError" class="infoMessage"><p>Your web browser does not support Speech Recognition. To use this feature, load this page in a supported browser like Google Chrome.</p></div>
+	</div>
+	
+	<div id="startPage">		
+		<div id="startContents">
+			<div id="innerStartContents">
+				<img id="logo" src="media/images/LogoTemp.png"/>
+				<div id="searchContents">
+					<div id="regionTabs">
+					</div>
+					
+					<div id="searchBar">
+						<p style="margin: 0;"><input type="text" autocomplete="off" id="searchName" placeholder="Enter Your Summoner Name"></p>						
+						<button type="button" id="btnCreate" class="btnLarge">Create</button>
+					</div>
+				</div>
+				<p>Don't have a LoL account? Try one of these: wxmx | Apollo Price | KingKingMid</p>
+			</div>
+			<button type="button" id="btnUseMic" class="btnLarge"><img id="micImage" src="media/images/mic.png" height="23px"></button>
+		</div>			
+	</div>
+	
+	<div id="infoPage">
+		<div id="infoContentContainer">
+			<div id='dynamicPlayerStats' style='padding-left: 5px; padding-right: 5px;'>
+				<div id='unrankedStats' class='statContainer'></div>
+				<div id='rankedStats' class='statContainer'></div>
+			</div>
+			<canvas id="infoCanvas" width="760px" height="310px"></canvas>
+			<div>
+				<a id="btnSigDownload" download="createdSig.png"><button type="button" class="btnLarge">Download</button></a>
+				<button type="button" id="btnSigUpload" class="btnLarge">Upload to Imgur</button>
+			</div>
+		</div>
+	</div>
+	
+	<div id="imagePreloads">
+		<img id="sigBase" src="media/images/sigBase.png"/>
+	</div>
+	
+  </body>
+</html>

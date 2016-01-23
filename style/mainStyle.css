@@ -1,0 +1,86 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: #eee;
+	padding: 0px;
+	margin: 0px;
+}
+
+p {
+	font-size: 125%;
+}
+
+#header {
+	width:100%;
+	min-height: 75px;
+	background-color: #222;
+	color: #eee;
+	display:flex;
+	align-items: center;
+}
+
+#headerContent, #about, #projects {
+	width: 90%;
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+#headerContent div {
+	display: inline-block;
+}
+
+#rightContent {
+	float: right;
+}
+
+#greeting {
+	height: 350px;
+	background-image: url("../media/images/MainBodyImage1.png");
+}
+
+#about {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+#aboutText p{
+	margin: 5px;
+}
+
+#projects {
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.projectPreview {
+	border: 3px solid #333;
+	border-radius: 10px;
+	text-align: center;
+	display: inline-block;
+	flex: 0 0 300px;
+	margin: 20px 10px 0 10px;
+	padding: 5px;
+	vertical-align: top;
+}
+
+.projectPreview h2 {
+	text-decoration: underline;
+	margin-bottom: 5px;
+}
+
+.projectPreview p {
+	font-size: 100%;
+}
+
+.projectPreview ul{
+	margin-top: 5px;
+	list-style-position: inside;
+}
+
+.projectPreview a, .projectPreview a:visited{
+	color:black;
+}

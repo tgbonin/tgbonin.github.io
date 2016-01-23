@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	
+	<link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
+	
+	<style>
+		canvas{ margin-top: 20px; }
+		
+		#audioControls { display: none; }
+		
+		body {
+			text-align: center;
+			background-color: black;
+		}
+		
+		#imagePreloads { display: none; }
+		
+	</style>
+	<title>Top Down Prototype</title>
+</head>
+<body>
+	<canvas>
+		Get a real browser!
+	</canvas>
+	<script src='js/utilities.js'></script>
+	<script src='js/loader.js'></script>
+	<script src='js/main.js'></script>
+	<script src='js/keys.js'></script>
+	<script src='js/sound.js'></script>
+	<script src='js/victor.js'></script>
+	<script src='js/emitter.js'></script>
+	
+	<section id="audioControls">
+		<audio id="bgAudio" src="media/background.mp3" controls loop></audio>
+		<audio id="effectAudio" controls</audio>
+	</section>
+	
+	<section id="imagePreloads">
+		<img id="IMGplayerShip" width="100" height="100" src="media/img/playerShip.png">
+		<img id="IMGbulletPlayer" width="20" height="20" src="media/img/bulletPlayer.png">
+		<img id="IMGstart" width="1080" height="720" src="media/img/StartScreen.png">
+		<img id="IMGbackground" width="1080" height="720" src="media/img/background.png">
+		<img id="IMGenemySS" width="1000" height="100" src="media/img/enemySS.png">
+	</section>
+	
+</body>
+</html>
