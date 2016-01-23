@@ -25,22 +25,21 @@ function addProjectToDiv(project){
 	var projDiv = document.createElement("div");
 	projDiv.className ='projectPreview';
 	
-	var link = document.createElement("a");
-	link.setAttribute('href', 'Projects/' + project.link);
-	
 	var titleH2 = document.createElement("h2");
 	var titleText = document.createTextNode(project.name);
 	titleH2.appendChild(titleText);
 	titleH2.setAttribute('margin', '0 auto');
-	projDiv.appendChild(titleH2);
-	link.appendChild(titleH2);
 	
 	var projImg = document.createElement("img");
 	projImg.setAttribute('src', "media/images/projectImages/" + project.image);
 	projImg.setAttribute('width', '90%');
 	projImg.setAttribute('margin', '0 auto');
-	projDiv.appendChild(projImg);
+	
+	var link = document.createElement("a");
+	link.setAttribute('href', 'Projects/' + project.link);
+	link.appendChild(titleH2);
 	link.appendChild(projImg);
+	projDiv.appendChild(link);
 	
 	var description = document.createElement('p');
 	var descText = document.createTextNode(project.description);
