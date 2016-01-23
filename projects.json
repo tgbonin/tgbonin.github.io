@@ -3,30 +3,35 @@
 		"name":"KSP Web Page Design",
 		"image":"kspWeb.png",
 		"description":"This is a temporary description for these projects.",
-		"skills":["Visual Design","UI/UX"]
+		"skills":["Visual Design","UI/UX"],
+		"link":"kspDD.pdf"
 	},
 	{
 		"name":"League Signature Generator",
 		"image":"lolSigGen.png",
 		"description":"This is a temporary description for these projects.",
-		"skills":["Javascript","API Implementation","UI/UX"]
+		"skills":["Javascript","API Implementation","UI/UX"],
+		"link":"lolSigGen"
 	},
 	{
 		"name":"Thunder Dunk",
 		"image":"thunderDunk.png",
 		"description":"This is a temporary description for these projects. This is a temporary description for these projects. This is a temporary description for these projects.",
-		"skills":["Unity","Visual Design","C#"]
+		"skills":["Unity","Visual Design","C#"],
+		"link":"thunderDunkDD.pdf"
 	},
 	{
 		"name":"Space Defender",
 		"image":"spaceDefender.png",
 		"description":"This is a temporary description for these projects.",
-		"skills":["Javascript","Game Design","Canvas"]
+		"skills":["Javascript","Game Design","Canvas"],
+		"link":"spaceDefender"
 	},
 	{
 		"name":"Thieves in the Night",
 		"image":"thieves.png",
 		"description":"This is a temporary description for these projects.",
-		"skills":["Game Design"]
+		"skills":["Game Design"],
+		"link":"thievesDD.pdf"
 	}
 ]}
