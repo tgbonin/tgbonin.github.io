@@ -2,35 +2,35 @@
 	{
 		"name":"KSP Web Page Design",
 		"image":"kspWeb.png",
-		"description":"This is a temporary description for these projects.",
+		"description":"A website design for the fictional company 'Kerbal Space Agency'. Includes a full design document for the site and two page designs from sketches to final mock-ups.",
 		"skills":["Visual Design","UI/UX"],
 		"link":"kspDD.pdf"
 	},
 	{
 		"name":"League Signature Generator",
 		"image":"lolSigGen.png",
-		"description":"This is a temporary description for these projects.",
+		"description":"A web application that grabs player's stats from the game League of Legends and presents them as an image for use on forums.",
 		"skills":["Javascript","API Implementation","UI/UX"],
 		"link":"lolSigGen"
 	},
 	{
 		"name":"Thunder Dunk",
 		"image":"thunderDunk.png",
-		"description":"This is a temporary description for these projects. This is a temporary description for these projects. This is a temporary description for these projects.",
+		"description":"A prototype for a fun fast paced ball-in-hoop game made in unity. Features silly 2D graphics and full controller support.",
 		"skills":["Unity","Visual Design","C#"],
 		"link":"thunderDunkDD.pdf"
 	},
 	{
 		"name":"Space Defender",
 		"image":"spaceDefender.png",
-		"description":"This is a temporary description for these projects.",
+		"description":"A small twin-stick style shooter where the you blast your way through enemies as you survive as long as you can.",
 		"skills":["Javascript","Game Design","Canvas"],
 		"link":"spaceDefender"
 	},
 	{
 		"name":"Thieves in the Night",
 		"image":"thieves.png",
-		"description":"This is a temporary description for these projects.",
+		"description":"A fun family card game centered around stealing wondrous (and not so wondrous) items, mostly from each other!",
 		"skills":["Game Design"],
 		"link":"thievesDD.pdf"
 	}
