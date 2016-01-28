@@ -15,7 +15,8 @@
 		rankName: "",
 		playerWinsR: 0,
 		playerWinsU: 0,
-		playerCKillsU: 0
+		playerCKillsU: 0,
+		numChampsPlayed: 0
 	};
 	
 	function init(){
@@ -258,6 +259,7 @@
 	function getRankedInfo(){		
 		var xhrRankInfo = new XMLHttpRequest();
 		xhrRankInfo.onload = function(){
+			console.log(xhrRankInfo.status);
 			if(xhrRankInfo.status == 200){
 				var myJSON = JSON.parse( xhrRankInfo.responseText );
 				var queues = myJSON[playerObject.playerID];
@@ -278,6 +280,7 @@
 				}
 				
 			}else{
+				console.log("Got to unranked");
 				playerObject.playerRank = "UNRANKED";
 				//console.dir(playerObject);
 				loadChampions();				
@@ -292,6 +295,8 @@
 			html.innerHTML += "<p>Division Name: " + playerObject.rankName + "</p>";
 			
 		}
+		
+		console.log("yep");
 		
 		var url = "https://na.api.pvp.net/api/lol/na/v2.5/league/by-summoner/" + playerObject.playerID + "/entry?api_key=0f6f00f5-c20b-40e9-9064-109ec3ad3c23";
 		xhrRankInfo.open('GET', url, true);
@@ -315,6 +320,9 @@
 				}
 				
 				if(champsPlayed.length == 3){ break; }
+				if(i == games.length -1){
+					playerObject.numChampsPlayed = champsPlayed.length;
+				}
 			}			
 			champsPlayed.forEach(getChampionKey);
 		}
@@ -326,7 +334,7 @@
 	
 	//get a champion key for the indicated champion name (string)
 	function getChampionKey(champ){	
-		
+		console.log("eoginsoegins");
 		var keys = [];
 		
 		var xhrChampInfo = new XMLHttpRequest();
@@ -335,7 +343,12 @@
 			var name = myJSON.key;
 			playerObject.championsPlayed.push(name);
 			
-			if(playerObject.championsPlayed.length == 3) loadDataPage();
+			console.log(playerObject.numChampsPlayed);
+			
+			if(playerObject.championsPlayed.length == playerObject.numChampsPlayed) {
+				
+				loadDataPage();
+			}
 		}
 		
 		var url = "https://global.api.pvp.net/api/lol/static-data/na/v1.2/champion/" + champ + "?api_key=0f6f00f5-c20b-40e9-9064-109ec3ad3c23";
