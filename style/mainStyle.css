@@ -56,6 +56,10 @@ p {
 }
 
 #projects {
+	text-align:center;
+}
+
+#generatedDivs {
 	display:flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -69,7 +73,8 @@ p {
 #skills div{
 	display: inline-block;
 	text-align:center;
-	margin: 0 50px;
+	margin: 0 15px;
+	width: 150px;
 	vertical-align: top;
 }
 
@@ -108,4 +113,8 @@ p {
 
 .projectPreview a, .projectPreview a:visited{
 	color:black;
+}
+
+.darkerBG {
+	background-color: #ddd;
 }
