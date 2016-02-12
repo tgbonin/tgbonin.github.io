@@ -299,7 +299,7 @@
 		console.log("yep");
 		
 		var url = "https://na.api.pvp.net/api/lol/na/v2.5/league/by-summoner/" + playerObject.playerID + "/entry?api_key=0f6f00f5-c20b-40e9-9064-109ec3ad3c23";
-		xhrRankInfo.open('GET', url, true);
+		xhrRankInfo.open('GET', 'https://people.rit.edu/txb2048/330/project3/riotRequest.php?summonerid=' + playerObject.playerID, true);
 		xhrRankInfo.send();
 	}
 	
