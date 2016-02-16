@@ -235,7 +235,7 @@
 					//insert this information into the first box on the data page
 					var html = document.querySelector("#unrankedStats");
 					
-					html.innerHTML += "<h3>S5 Unranked Stats for: " + playerObject.displayName + "</h3>";
+					html.innerHTML += "<h3>Unranked Stats for: " + playerObject.displayName + "</h3>";
 					html.innerHTML += "<p>Player ID: " + playerObject.playerID + "</p>";
 					playerObject.playerWinsU = gameStats.wins;
 					html.innerHTML += "<p>Wins: " + gameStats.wins + "</p>";
@@ -259,7 +259,7 @@
 	function getRankedInfo(){		
 		var xhrRankInfo = new XMLHttpRequest();
 		xhrRankInfo.onload = function(){
-			console.log(xhrRankInfo.status);
+			//console.log(xhrRankInfo.status);
 			if(xhrRankInfo.status == 200){
 				var myJSON = JSON.parse( xhrRankInfo.responseText );
 				var queues = myJSON[playerObject.playerID];
@@ -275,31 +275,35 @@
 						playerObject.playerWinsR = queues[i].entries[0].wins;
 						playerObject.rankName = queues[i].name;
 						
+						
+						//loadDataPage();
 						loadChampions();
 					}
 				}
 				
 			}else{
-				console.log("Got to unranked");
+				//console.log("Got to unranked");
 				playerObject.playerRank = "UNRANKED";
 				//console.dir(playerObject);
+				
+				//loadDataPage();
 				loadChampions();				
 			}
 			
 			//put this info in the second data box
 			var html = document.querySelector("#rankedStats");
 			
-			html.innerHTML += "<h3>S5 Ranked Stats for: " + playerObject.displayName + "</h3>";
+			html.innerHTML += "<h3>S6 Ranked Stats for: " + playerObject.displayName + "</h3>";
 			html.innerHTML += "<p>Wins: " + playerObject.playerWinsR + "</p>";
 			html.innerHTML += "<p>Rank: " + playerObject.playerRank + " " + playerObject.rankLevel + "</p>";
 			html.innerHTML += "<p>Division Name: " + playerObject.rankName + "</p>";
 			
 		}
 		
-		console.log("yep");
+		//console.log("yep");
 		
-		var url = "https://na.api.pvp.net/api/lol/na/v2.5/league/by-summoner/" + playerObject.playerID + "/entry?api_key=0f6f00f5-c20b-40e9-9064-109ec3ad3c23";
-		xhrRankInfo.open('GET', 'https://people.rit.edu/txb2048/330/project3/riotRequest.php?summonerid=' + playerObject.playerID, true);
+		var url = "https://na.api.pvp.net/api/lol/na/v2.5/league/by-summoner/";
+		xhrRankInfo.open('GET', 'https://people.rit.edu/txb2048/330/project3/riotRequest.php?summonerid=' + playerObject.playerID + '&url=' + url, true);
 		xhrRankInfo.send();
 	}
 	
@@ -312,6 +316,7 @@
 			var myJSON = JSON.parse( xhrChampionsRecent.responseText );
 			
 			var games = myJSON.games;
+			//console.dir(games);
 			
 			for(var i = 0; i < games.length; i++){
 				
@@ -319,11 +324,23 @@
 					champsPlayed.push(games[i].championId);
 				}
 				
-				if(champsPlayed.length == 3){ break; }
-				if(i == games.length -1){
-					playerObject.numChampsPlayed = champsPlayed.length;
+				if(champsPlayed.length == 3) {
+					break;
 				}
-			}			
+				
+				//if(champsPlayed.indexOf(games[i].championId) == -1){
+				//	champsPlayed.push(games[i].championId);
+				//}
+				//
+				//if(champsPlayed.length == 3){ break; }
+				//if(i == games.length -1){
+				//	playerObject.numChampsPlayed = champsPlayed.length;
+				//}
+				
+			}
+			
+			playerObject.numChampsPlayed = champsPlayed.length;
+			//console.dir(champsPlayed);
 			champsPlayed.forEach(getChampionKey);
 		}
 		
@@ -334,19 +351,17 @@
 	
 	//get a champion key for the indicated champion name (string)
 	function getChampionKey(champ){	
-		console.log("eoginsoegins");
-		var keys = [];
-		
+		//console.log(champ);
+
 		var xhrChampInfo = new XMLHttpRequest();
 		xhrChampInfo.onload = function(){
 			var myJSON = JSON.parse( xhrChampInfo.responseText );
 			var name = myJSON.key;
 			playerObject.championsPlayed.push(name);
 			
-			console.log(playerObject.numChampsPlayed);
+			//console.log(playerObject.numChampsPlayed);
 			
 			if(playerObject.championsPlayed.length == playerObject.numChampsPlayed) {
-				
 				loadDataPage();
 			}
 		}
