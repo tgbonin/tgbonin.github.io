@@ -5,6 +5,17 @@
 	<title>Timothy Bonin - GDD</title>
 	<link rel="stylesheet" type="text/css" href="style/mainStyle.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+     <script src="js/smooth-scroll.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            smoothScroll.init({
+                speed: 1000,
+                easing: 'easeInOutCubic'
+            });
+        });
+    </script>
+    
 </head>
 <body>
 	<section id="header">
@@ -14,7 +25,11 @@
 				<p>Game Design and Development / Web Development</p>
 			</div>
 			<div id="rightContent">
-				<a href=https://github.com/tgbonin>
+				<a href="media/TimothyBoninResume2016.pdf">
+				<img src="./media/images/pdfIcon.png" width=50 style="margin-right: 5px"/>
+				</a>
+                   
+                    <a href=https://github.com/tgbonin>
 				<img src="./media/images/GithubLogo.png" width=50 style="margin-right: 5px"/>
 				</a>
 				
@@ -25,8 +40,8 @@
 		</div>
 	</section>
 	
-	<section id="greeting">
-	</section>
+	<a data-scroll href="#projects"><section id="greeting">
+	</section></a>
 	
 	<section id="about">
 		<img src="./media/images/picture.jpg" width=250 style="float:left; margin:10px; margin-top: 0px"/>
@@ -34,14 +49,14 @@
 		<div id="aboutText">
 			<h2>Let me introduce myself!</h2>
 			<p>
-				&nbsp; I am currently a Game Design and Development student at the Rochester Institute of Technology
+				I am currently a Game Design and Development student at the Rochester Institute of Technology
 				with a minor in Web Development. My passion lies with interactive design, but I have been
 				greatly successful with programming in multiple environments. I have a large amount of experience
 				with working in team environments, and I have successfully completed many larger projects by 
 				doing so.
 			</p>
 			<p>
-				&nbsp; Outside of work, you can normally find me playing games or drawing whatever comes to mind. I 
+				Outside of work, you can normally find me playing games or drawing whatever comes to mind. I 
 				currently am obsessed with League of Legends (which I'm terrible at) and Civilization 5 (which
 				I am less terrible at). 
 			</p>

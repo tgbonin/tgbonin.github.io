@@ -106,11 +106,12 @@ section {
 }
 
 .projectPreview p {
-	font-size: 100%;
+	font-size: 120%;
 }
 
 .projectPreview ul{
 	margin-top: 5px;
+     font-size: 1.2em;
 	list-style-position: inside;
 }
 
