@@ -2,49 +2,63 @@ html, body {
     height: 100%;
 }
 
-#backgroundContainer {
-    width: 100%;
-    min-height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+body{
+    background: url("../images/sky.png") no-repeat center center fixed;
+    background-size: cover;
 }
 
-
-#vortex {
-	width: 50%;
-	height: 250px;
-	position: relative;
-	z-index: 0;
+.rainbow {
+    background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+    background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 
-#vortex.vortex-animating>* {
-	
-}
-
-.spinImage {
-    height: 200px;
-    width: 250px;
-    overflow: visible !important;
-}
-
-#whiteOverlay {
-    position: absolute;
-    top: 0;
+#background-opacity{
+    background-color:black;
+    opacity: 0.9;
+    
+    position: fixed;
     left: 0;
+    top: 0;
+    z-index: 0;
     width: 100%;
     height: 100%;
-    
-    background-color: white;
-    opacity: .7;
 }
 
 #Rules {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 10px;
-    border: 2px solid black;
-    background-color: rgba(255,255,255,.5)
+    margin-top: 40px;
+    color: white;
+    font-family: 'Gloria Hallelujah', cursive;
+    line-height: 1.5;
+    position: relative;
+    z-index: 1;
+}
+
+#Rules h2 {
+    text-decoration: underline;
+}
+
+h1{
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+.ruleDiv{
+    width: 500px;
+    margin: 0 auto;
+}
+
+.ruleDiv li{
+    font-size: 1.2em;
+}
+
+.spooky{
+    text-align:center; 
+    margin-top:5px; 
+    color:orange; 
+    font-size: 3em;
+    margin-top: 20px;
 }
