@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Quests - Adventurer's Guild</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="adventureguild.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $("#header").load("header.html");
+
+            $.getJSON("/data/quests.json", function (data) {
+                var questList = data.questList;
+                questList.forEach(quest => {
+                    var questItem = $("<div class='quest-item card'></div>");
+                    
+                    var questTitle = $("<h3></h3>").text(quest.title);
+                    
+                    var questBody = $("<div class='card-body'></div>"); 
+                    var questDescription = $("<p></p>").text(quest.description);
+                    var goldReward = $("<p style='margin-top:0.5em;'></p>").text("Gold Reward: " + quest.goldReward);
+                    var otherReward = $("<p></p>").text("Other Rewards: " + quest.otherReward);
+                    questBody.append(questDescription, goldReward);
+                    if(quest.otherReward){
+                        questBody.append(otherReward);
+                    }
+
+                    questItem.append(questTitle, questBody);
+                    
+                    $("#questList").append(questItem);
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="page">
+        <div id="header"></div>
+        <div id="main">
+            <h1>Guild Quests</h1>
+            <p>
+                Looking to get yer mitts dirty on another adventure eh? Well let's crack open the book and we'll see
+                what we've got available for ya's.
+            </p>
+            <div id="questList" class="cardList" style="margin-top:1em"></div>
+        </div>
+    </div>
+</body>
+
+</html>

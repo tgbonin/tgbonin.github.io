@@ -1,0 +1,64 @@
+{
+    "questList": [
+        {
+            "title": "Quest 1",
+            "description": "This is the first quest",
+            "goldReward": 100,
+            "otherReward": "Some other reward"
+        },
+        {
+            "title": "Quest 2",
+            "description": "This is the second quest",
+            "goldReward": 200,
+            "otherReward": null
+        },
+        {
+            "title": "Quest 3",
+            "description": "This is the third quest",
+            "goldReward": 300,
+            "otherReward": "Some other reward"
+        },
+        {
+            "title": "Quest 4",
+            "description": "This is the fourth quest",
+            "goldReward": 400,
+            "otherReward": "Some other reward"
+        },
+        {
+            "title": "Quest 5",
+            "description": "This is the fifth quest",
+            "goldReward": 500,
+            "otherReward": "Some other reward"
+        },
+        {
+            "title": "Quest 6",
+            "description": "This is the sixth quest",
+            "goldReward": 600,
+            "otherReward": "Some other reward"
+        },
+        {
+            "title": "Quest 7",
+            "description": "This is the seventh quest",
+            "goldReward": 700,
+            "otherReward": "Some other reward"
+        },
+        {
+            "title": "Quest 8",
+            "description": "This is the eighth quest",
+            "goldReward": 800,
+            "otherReward": "Some other reward"
+        },
+        {
+            "title": "Quest 9",
+            "description": "This is the ninth quest",
+            "goldReward": 900,
+            "otherReward": "Some other reward"
+        },
+        {
+            "title": "Quest 10",
+            "description": "This is the tenth quest",
+            "goldReward": 1000,
+            "otherReward": "Some other reward"
+        }
+    ]
+}
