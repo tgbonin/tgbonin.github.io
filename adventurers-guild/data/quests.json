@@ -4,7 +4,7 @@
             "title": "Quest 1",
             "description": "This is the first quest",
             "goldReward": 100,
-            "otherReward": "Some other reward"
+            "otherReward": null
         },
         {
             "title": "Quest 2",
@@ -22,19 +22,19 @@
             "title": "Quest 4",
             "description": "This is the fourth quest",
             "goldReward": 400,
-            "otherReward": "Some other reward"
+            "otherReward": null
         },
         {
             "title": "Quest 5",
             "description": "This is the fifth quest",
             "goldReward": 500,
-            "otherReward": "Some other reward"
+            "otherReward": null
         },
         {
             "title": "Quest 6",
             "description": "This is the sixth quest",
             "goldReward": 600,
-            "otherReward": "Some other reward"
+            "otherReward": null
         },
         {
             "title": "Quest 7",
@@ -46,19 +46,19 @@
             "title": "Quest 8",
             "description": "This is the eighth quest",
             "goldReward": 800,
-            "otherReward": "Some other reward"
+            "otherReward": null
         },
         {
             "title": "Quest 9",
             "description": "This is the ninth quest",
             "goldReward": 900,
-            "otherReward": "Some other reward"
+            "otherReward": null
         },
         {
             "title": "Quest 10",
             "description": "This is the tenth quest",
             "goldReward": 1000,
-            "otherReward": "Some other reward"
+            "otherReward": null
         }
     ]
 }
