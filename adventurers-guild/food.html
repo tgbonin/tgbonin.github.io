@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>foods - Adventurer's Guild</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="adventureguild.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $("#header").load("header.html");
+
+            $.getJSON("./data/food.json", function (data) {
+                var foodList = data.foodList;
+                foodList.forEach(food => {
+                    var foodItem = $("<div class='quest-item card'></div>");
+                    
+                    var foodTitle = $("<h3></h3>").text(food.name);
+
+                    var goldRewardContainer = $("<div class='quest-gold-reward'></div>");
+                    var goldReward = $("<p class='gold-reward-text'></p>").text(food.goldCost);
+                    var goldIcon = $("<img src='./img/gold-icon.webp' class='gold-icon'>");
+                    goldRewardContainer.append(goldReward, goldIcon);
+                    
+                    var foodBody = $("<div class='card-body'></div>"); 
+                    var foodDescription = $("<p></p>").append($("<i></i>").text(food.description));
+                    foodBody.append(foodDescription);
+
+                    foodBody.append($("<hr>"));
+
+                    food.effects.forEach(effect => {
+                        var effectText = $("<p></p>").text(effect);
+                        foodBody.append(effectText);
+                    });
+
+                    foodItem.append(foodTitle, goldRewardContainer, foodBody);
+                    
+                    $("#foodList").append(foodItem);
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="page">
+        <div id="header"></div>
+        <div id="main">
+            <h1>Guild foods</h1>
+            <p>
+                Looking to get yer mitts dirty on another adventure eh? Well let's crack open the book and we'll see
+                what we've got available for ya's.
+            </p>
+            <div id="foodList" class="card-list food-list" style="margin-top:1em"></div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+{
+    "foodList": [
+        {
+            "name": "Iron Rations",
+            "description": "A medley of cured meats, dried fruits, nuts, cheese, and crackers. Packed with protein, this simple meal will be sure to keep you feeling nice and hearty during your journey.",
+            "goldCost": 50,
+            "effects": [
+                "+1 AC"
+            ]
+        },
+        {
+            "name": "Spicy Chicken Stirfry",
+            "description": "A spicy stirfry made with chicken, vegetables, and a variety of spices. Our local spices are sure to put some pep in your step and keep you on your toes.",
+            "goldCost": 100,
+            "effects": [
+                "+1 Initiative"
+            ]
+        },
+        {
+            "name": "Lucky Rabbit Stew",
+            "description": "A slow cooked stew made with special rabbits bred for decades specifically for their lucky properties. Paired with a side of sourdough bread, those who eat this leave the guild with a feeling they can do just about anything.",
+            "goldCost": 500,
+            "effects": [
+                "You have the strangest feeling that just about everything is going to go your way this adventure..."
+            ]
+        }
+    ]
+}
